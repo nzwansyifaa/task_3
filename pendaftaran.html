@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Workshop Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Workshop Pengembangan Web</h1>
+    <nav>
+      <a href="pendaftaran.html" class="aktif">Pendaftaran</a>
+      <a href="detail.html">Detail Pendaftar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Formulir Pendaftaran</h2>
+      <p class="catatan">
+        Isi data berikut lalu tekan <b>Daftar</b>. Data dikirim ke
+        <code>detail.html</code> lewat <b>query string</b> (method GET).
+      </p>
+
+      <form id="form-daftar" method="get" action="detail.html">
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="contoh: 124140169"
+                   pattern="[0-9]{9}" title="NIM terdiri dari 9 angka" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telp">No. Telepon</label>
+            <input type="tel" id="telp" name="telp" placeholder="08xxxxxxxxxx">
+          </div>
+
+          <div class="form-group">
+            <label for="tgl">Tanggal Lahir</label>
+            <input type="date" id="tgl" name="tgl">
+          </div>
+
+          <div class="form-group">
+            <label for="prodi">Program Studi</label>
+            <select id="prodi" name="prodi" required>
+              <option value="">Pilih Program Studi</option>
+              <optgroup label="Fakultas Teknologi Industri">
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+              </optgroup>
+              <optgroup label="Fakultas Sains">
+                <option value="Matematika">Matematika</option>
+                <option value="Fisika">Fisika</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>Jenis Kelamin</legend>
+              <div class="pilihan">
+                <label for="pria"><input type="radio" id="pria" name="gender" value="Laki-laki" checked> Laki-laki</label>
+                <label for="wanita"><input type="radio" id="wanita" name="gender" value="Perempuan"> Perempuan</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend>Minat</legend>
+              <div class="pilihan">
+                <label><input type="checkbox" name="minat" value="Frontend"> Frontend</label>
+                <label><input type="checkbox" name="minat" value="Backend"> Backend</label>
+                <label><input type="checkbox" name="minat" value="UI/UX"> UI/UX</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group penuh">
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat"></textarea>
+          </div>
+
+          <div class="form-group penuh">
+            <label for="kota">Kota Asal</label>
+            <input type="text" id="kota" name="kota" list="daftar-kota" placeholder="Pilih / ketik kota">
+            <datalist id="daftar-kota">
+              <option value="Bandar Lampung">
+              <option value="Metro">
+              <option value="Palembang">
+              <option value="Jakarta">
+            </datalist>
+          </div>
+
+        </div>
+
+        <div class="tombol">
+          <button type="submit">Daftar</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>Tugas Individu 3 - Pengembangan Aplikasi Web &copy; 2026</footer>
+
+</body>
+</html>

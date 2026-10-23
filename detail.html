@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Pendaftar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Workshop Pengembangan Web</h1>
+    <nav>
+      <a href="pendaftaran.html">Pendaftaran</a>
+      <a href="detail.html" class="aktif">Detail Pendaftar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Detail Informasi Pendaftar</h2>
+      <p class="catatan">
+        Halaman ini berisi <b>data dummy</b>. Data dari form tidak ditangkap,
+        hanya didesain bagaimana query string-nya dikirim.
+      </p>
+
+      <table>
+        <caption>Data Pendaftar</caption>
+        <tbody>
+          <tr><th>Nama Lengkap</th><td>Nazwa Nasyifaa Mega</td></tr>
+          <tr><th>NIM</th><td>124140169</td></tr>
+          <tr><th>Email</th><td>nazwa@example.com</td></tr>
+          <tr><th>No. Telepon</th><td>081234567890</td></tr>
+          <tr><th>Tanggal Lahir</th><td>30 November 2006</td></tr>
+          <tr><th>Program Studi</th><td>Teknik Informatika</td></tr>
+          <tr><th>Jenis Kelamin</th><td>Perempuan</td></tr>
+          <tr><th>Minat</th><td>UI/UX</td></tr>
+          <tr><th>Alamat</th><td>Jl. Terusan Ryacudu, Way Hui, Lampung Selatan</td></tr>
+          <tr><th>Kota Asal</th><td>Bandar Lampung</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Desain Query String</h2>
+      <p>Form memakai <code>method="get"</code>, sehingga setiap isian dikirim sebagai pasangan <code>name=value</code> yang dipisah tanda <code>&amp;</code> pada URL:</p>
+
+      <div class="url-box">
+        detail.html<span>?</span>nama<span>=</span>Budi+Santoso<span>&amp;</span>nim<span>=</span>124140001<span>&amp;</span>email<span>=</span>budi%40example.com<span>&amp;</span>telp<span>=</span>081234567890<span>&amp;</span>tgl<span>=</span>2005-03-12<span>&amp;</span>prodi<span>=</span>Teknik+Informatika<span>&amp;</span>gender<span>=</span>Laki-laki<span>&amp;</span>minat<span>=</span>Frontend<span>&amp;</span>minat<span>=</span>UI%2FUX<span>&amp;</span>alamat<span>=</span>Jl.+Terusan+Ryacudu<span>&amp;</span>kota<span>=</span>Bandar+Lampung
+      </div>
+
+      <br>
+      <table>
+        <caption>Pemetaan name pada form ke query string</caption>
+        <thead>
+          <tr><th>Atribut name</th><th>Elemen Form</th><th>Contoh Query String</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>nama</td><td>input text</td><td>nama=Budi+Santoso</td></tr>
+          <tr><td>nim</td><td>input text (pattern)</td><td>nim=124140001</td></tr>
+          <tr><td>email</td><td>input email</td><td>email=budi%40example.com</td></tr>
+          <tr><td>telp</td><td>input tel</td><td>telp=081234567890</td></tr>
+          <tr><td>tgl</td><td>input date</td><td>tgl=2005-03-12</td></tr>
+          <tr><td>prodi</td><td>select + optgroup</td><td>prodi=Teknik+Informatika</td></tr>
+          <tr><td>gender</td><td>input radio</td><td>gender=Laki-laki</td></tr>
+          <tr><td>minat</td><td>input checkbox</td><td>minat=Frontend&amp;minat=UI%2FUX</td></tr>
+          <tr><td>alamat</td><td>textarea</td><td>alamat=Jl.+Terusan+Ryacudu</td></tr>
+          <tr><td>kota</td><td>input + datalist</td><td>kota=Bandar+Lampung</td></tr>
+        </tbody>
+      </table>
+
+      <p><a href="pendaftaran.html" class="btn abu">&larr; Kembali ke Pendaftaran</a></p>
+    </section>
+
+  </main>
+
+  <footer>Tugas Individu 3 - Pengembangan Aplikasi Web &copy; 2026</footer>
+
+</body>
+</html>
